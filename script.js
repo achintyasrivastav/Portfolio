@@ -1,27 +1,39 @@
 
+
 let connect = 0;
 document.querySelector('.connect').addEventListener('click', () => {
     const accounts = document.querySelectorAll('.account');
 
     if (connect === 0) {
         connect = 1;
+        // Show the accounts with GSAP animation
         accounts.forEach((account, index) => {
-            setTimeout(() => {
-                account.style.opacity = 1;
-                account.style.transform = "translateY(0)";
-                document.querySelector('.accounts').style.zIndex = 99;
-            }, index * 150); 
+            gsap.to(account, {
+                opacity: 1,
+                y: 0,
+                duration: 0.5,
+                delay: index * 0.15, // Stagger the animations
+                ease: "power2.out"
+            });
         });
+
+        // Bring the accounts container to the front
+        gsap.to(document.querySelector('.accounts'), { zIndex: 99 });
     } else {
         connect = 0;
-        const totalAccounts = accounts.length
+        // Hide the accounts with GSAP animation
         accounts.forEach((account, index) => {
-            setTimeout(() => {
-                account.style.opacity = 0;
-                account.style.transform = "translateY(0)";
-                document.querySelector('.accounts').style.zIndex = 99;
-            }, index * 100);
+            gsap.to(account, {
+                opacity: 0,
+                y: 20,
+                duration: 0.5,
+                delay: index * 0.1, // Stagger the animations
+                ease: "power2.in"
+            });
         });
+
+        // Reset the accounts container zIndex
+        gsap.to(document.querySelector('.accounts'), { zIndex: -1 });
     }
 });
 
@@ -98,3 +110,65 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+const pianoKeys = document.querySelectorAll(".piano-keys .key"),
+      volumeSlider = document.querySelector(".volume-slider input"),
+      keysCheckbox = document.querySelector(".keys-checkbox input");
+
+let allKeys = [],
+    audio = new Audio(`tunes/a.wav`); // Default audio src
+
+const playTune = (key) => {
+    audio.src = `tunes/${key}.wav`; // Set audio source based on key
+    audio.play(); // Play audio
+
+    const clickedKey = document.querySelector(`[data-key="${key}"]`); // Find clicked key element
+    clickedKey.classList.add("active"); // Add active class
+    setTimeout(() => { 
+        clickedKey.classList.remove("active"); // Remove active class
+    }, 150);
+
+    // Trigger animation
+    animateSkillBubble(key);
+}
+
+pianoKeys.forEach(key => {
+    allKeys.push(key.dataset.key); // Add data-key value to the allKeys array
+    key.addEventListener("click", () => playTune(key.dataset.key)); // Add click listener
+});
+
+const handleVolume = (e) => {
+    audio.volume = e.target.value; // Set audio volume
+}
+
+const showHideKeys = () => {
+    pianoKeys.forEach(key => key.classList.toggle("hide")); // Toggle hide class
+}
+
+const pressedKey = (e) => {
+    if (allKeys.includes(e.key)) playTune(e.key); // Play tune if key is valid
+}
+
+keysCheckbox.addEventListener("click", showHideKeys);
+volumeSlider.addEventListener("input", handleVolume);
+document.addEventListener("keydown", pressedKey);
+
+// Function to animate the skill bubble when a specific key is pressed
+function animateSkillBubble(key) {
+    const skillBubble = document.querySelector(`.key[data-key="${key}"] .skill-bubble`);
+    
+    if (skillBubble) {
+        gsap.fromTo(
+            skillBubble,
+            { opacity: 0, y: 10}, // Start hidden, slightly below
+            {
+                opacity: 1,       // Fade in
+                y: -120,           // Move up
+                duration: 3,      // Duration
+                ease: "power2.out",
+                onComplete: () => {
+                    gsap.to(skillBubble, { opacity: 0, duration: 1 }); // Fade out
+                }
+            }
+        );
+    }
+}

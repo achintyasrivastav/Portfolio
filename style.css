@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,400;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 *{
     margin: 0;
@@ -8,11 +9,10 @@
 }
 
 html, body{
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
     background-color: black;  
     font-family: "Roboto", sans-serif;
-    overflow: hidden;
 }
 
 #header{
@@ -25,10 +25,10 @@ html, body{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding-bottom: 40px;
-    padding-top: 40px;
+    padding: 30px 0;
     border-bottom: 1px solid whitesmoke;
-    z-index: 99;
+    z-index: 999;
+    width: 100%;
 }
 
 .header-wrap{
@@ -39,6 +39,7 @@ html, body{
     font-family:cursive;
     font-size: 13px;
     font-weight: normal;
+    width: 100%;
 }
 
 .logo{
@@ -46,14 +47,6 @@ html, body{
     height: 22px;
 }
 
-
-.search-box{
-    height: 30px;
-    padding: 5px;
-    margin: 0px 20px;
-    border: 1px solid black;
-    border-radius: 3px;
-}
 
 #icons{
     display: flex;
@@ -66,10 +59,34 @@ html, body{
     padding: 0px 20px;
 }
 
-#main-grid{
-    margin-top: 60px;
-    min-height: 100vh;
 
+@media (max-width: 768px) {
+    /* Make header non-fixed on mobile */
+    #header {
+        position: static;
+    }
+    
+    /* Fix icons div at the bottom on mobile */
+    #icons {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: black;
+        border-top: 1px solid whitesmoke;
+        padding: 10px 0;
+        justify-content: space-around;
+        z-index: 1000;
+    }
+}
+
+
+/*------------------------------------------------------------------------------*/
+
+#main-grid{
+    margin-top: 80px;
+    min-height: 100vh;
+    margin-bottom: 10px;
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
@@ -192,9 +209,284 @@ html, body{
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-#projects{
-    height: 200px;
-    padding: 40px 20px;
+#side-main{
+    height: 500px;
     margin-top: 40px;
-    border: 1px solid ghostwhite;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
 }
+
+.signature{
+    height: 160px;
+    padding: 12px;
+    background-color: ghostwhite;
+    border: 1px solid ghostwhite;
+    border-radius: 10px;
+    font-family: 'Osward', serif;
+}
+
+#bp{
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(141, 139, 139);
+}
+
+.document-block{
+    display: flex;
+    justify-content: space-between;
+}
+
+.document-block h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+}
+
+.document-block a{
+    padding: 10px;
+    background-color: black;
+    color: ghostwhite;
+    border: none;
+    border-radius: 22px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.part2{
+    margin-top: 10px;
+}
+
+.projects{
+    padding-bottom: 100px;
+}
+
+.project{
+    font-family: 'Oswald', serif;
+    color: ghostwhite;
+}
+
+.projects h1{
+    margin-top: 20px;
+    color: ghostwhite;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid ghostwhite;
+}
+
+.project{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.project img{
+    margin-top: 9px;
+    height: 75px;
+}
+
+.project-headings{
+    display: flex;
+    flex-direction: column;
+}
+
+.project-text{
+    padding-left: 11px;
+}
+
+.project-headings a{
+    padding: 5px;
+    color: ghostwhite;
+    border: 1px solid ghostwhite;
+    border-radius: 2px;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.projects .all-projects{
+    color: ghostwhite;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 50px;
+    padding: 15px 150px;
+    border: 1px solid ghostwhite;
+    border-radius: 50px;
+}
+
+.box{
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+
+/*piano*/
+.wrapper {
+    margin: 0px 20px;
+    padding: 35px 35px;
+    border-radius: 20px;
+    background: #141414;
+  }
+  .wrapper header {
+    display: flex;
+    color: #B2B2B2;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header h2 {
+    font-size: 1.6rem;
+  }
+  header .column {
+    display: flex;
+    align-items: center;
+  }
+  header span {
+    font-weight: 500;
+    margin-right: 15px;
+    font-size: 1.19rem;
+  }
+  header input {
+    outline: none;
+    border-radius: 30px;
+  }
+  .volume-slider input {
+    accent-color: #fff;
+  }
+
+  .wrapper p{
+    color: ghostwhite;
+    margin-top: 15px;
+    font-family: 'Osward', serif;
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .keys-checkbox input {
+    height: 30px;
+    width: 60px;
+    cursor: pointer;
+    appearance: none;
+    position: relative;
+    background: #4B4B4B
+  }
+  .keys-checkbox input::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #8c8c8c;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+  }
+  .keys-checkbox input:checked::before {
+    left: 35px;
+    background: #fff;
+  }
+  .piano-keys {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 40px;
+  }
+  .piano-keys .key {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    text-transform: uppercase;
+  }
+  .piano-keys .black {
+    z-index: 2;
+    width: 44px;
+    height: 140px;
+    margin: 0 -22px 0 -22px;
+    border-radius: 0 0 5px 5px;
+    background: linear-gradient(#333, #000);
+  }
+  .piano-keys .black.active {
+    box-shadow: inset -5px -10px 10px rgba(255,255,255,0.1);
+    background:linear-gradient(to bottom, #000, #434343);
+  }
+  .piano-keys .white {
+    height: 230px;
+    width: 70px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    background: linear-gradient(#fff 96%, #eee 4%);
+  }
+  .piano-keys .white.active {
+    box-shadow: inset -5px 5px 20px rgba(0,0,0,0.2);
+    background:linear-gradient(to bottom, #fff 0%, #eee 100%);
+  }
+  .piano-keys .key span {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    color: #A2A2A2;
+    font-size: 1.13rem;
+    text-align: center;
+  }
+  .piano-keys .key.hide span {
+    display: none;
+  }
+  .piano-keys .black span {
+    bottom: 13px;
+    color: #888888;
+  }
+  .key.active {
+    animation: wave 0.5s ease-in-out;
+  }
+  
+  @keyframes wave {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.3);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .piano-keys .key {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .piano-keys .key::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+  }
+  
+  .piano-keys .key.active::after {
+    width: 200px;
+    height: 200px;
+  }
+
+ .skill-bubble{
+    padding: 15px;
+    border-radius: 35px;
+    opacity: 0;
+    transform: translate(-50%, -50%, -50%);
+    transition: opacity .1s ease-in-out;
+    z-index: 10; 
+    position: absolute; 
+ }
+
+
