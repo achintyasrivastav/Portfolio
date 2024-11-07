@@ -152,7 +152,7 @@ keysCheckbox.addEventListener("click", showHideKeys);
 volumeSlider.addEventListener("input", handleVolume);
 document.addEventListener("keydown", pressedKey);
 
-// Function to animate the skill bubble when a specific key is pressed
+
 function animateSkillBubble(key) {
     const skillBubble = document.querySelector(`.key[data-key="${key}"] .skill-bubble`);
     
