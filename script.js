@@ -1,4 +1,40 @@
-
+window.addEventListener('load', () => {
+    const progressBar = document.querySelector('.progress-bar');
+    const percentage = document.querySelector('.percentage');
+    const revealScreen = document.querySelector('.reveal-screen');
+    const mainContent = document.querySelector('.main-content');
+  
+    let loadProgress = 0;
+  
+    const loadingAnimation = setInterval(() => {
+      loadProgress += 1;
+      progressBar.style.width = `${loadProgress}%`;
+      percentage.textContent = `${loadProgress}%`;
+  
+      if (loadProgress === 100) {
+        clearInterval(loadingAnimation);
+  
+        // Slide up and fade out the reveal screen
+        gsap.to(revealScreen, {
+          z: '-100%',
+          duration: 1, // Duration of the slide-up
+          ease: 'power2.out',
+          onComplete: () => {
+            revealScreen.style.display = 'none'; // Ensures reveal screen doesn't block interaction
+  
+            // Fade-in main content
+            gsap.to(mainContent, {
+              opacity: 1,
+              duration: .5,
+              ease: 'power2.inOut'
+            });
+          }
+        });
+      }
+    }, 30); // Adjust speed as needed
+  });
+  
+  
 
 let connect = 0;
 document.querySelector('.connect').addEventListener('click', () => {
