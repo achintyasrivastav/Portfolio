@@ -208,3 +208,60 @@ function animateSkillBubble(key) {
         );
     }
 }
+
+
+// Import GSAP and MotionPathPlugin if not already done
+gsap.registerPlugin(MotionPathPlugin);
+
+const flowerContainer = document.querySelector('.flower-container');
+
+// Number of flower particles to create
+const flowerCount = 20;
+
+// Function to create a flower particle with random properties
+function createFlower() {
+    const flower = document.createElement('img');
+    flower.src = './icons/daisy.png';  // Adjust path as needed
+    flower.classList.add('flower');
+
+    // Random size between 20px and 50px
+    const size = Math.floor(Math.random() * 30) + 20;
+    flower.style.width = `${size}px`;
+    flower.style.height = 'auto';
+
+    // Random initial position within the viewport
+    flower.style.top = `${Math.random() * 100}vh`;
+    flower.style.left = `${Math.random() * 100}vw`;
+
+    flowerContainer.appendChild(flower);
+
+    animateFlower(flower);
+}
+
+// Function to animate a flower in a random path
+function animateFlower(flower) {
+    const duration = Math.random() * 10 + 5;  // Duration between 5s and 15s
+    gsap.to(flower, {
+        duration: duration,
+        repeat: -1,
+        ease: "power1.inOut",
+        motionPath: {
+            path: [
+                { x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight },
+                { x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight },
+                { x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight },
+                { x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight }
+            ],
+            curviness: 1.5,
+            autoRotate: false
+        },
+        opacity: gsap.utils.random(0.3, 1),
+        scale: gsap.utils.random(0.5, 1),
+        yoyo: true
+    });
+}
+
+// Create multiple flowers
+for (let i = 0; i < flowerCount; i++) {
+    createFlower();
+}

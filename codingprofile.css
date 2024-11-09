@@ -15,21 +15,6 @@ html, body{
     font-family: "Roboto", sans-serif;
 }
 
-.flower-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.flower {
-    width: 50px;
-    height: auto;
-    position: absolute;
-}
-
 /*-------------------------------------------------------------------------------*/
 
 #header{
@@ -44,7 +29,7 @@ html, body{
     justify-content: space-around;
     padding: 40px 0;
     border-bottom: 1px solid whitesmoke;
-    z-index: 99;
+    z-index: 999;
 }
 
 .header-wrap{
@@ -68,6 +53,10 @@ html, body{
     align-items: center;
 }
 
+#icons a{
+    cursor: pointer;
+}
+
 .icon{
     height: 30px;
     padding: 0px 20px;
@@ -78,6 +67,7 @@ html, body{
 
 #main-content{
     display: flex;
+    z-index: 99;
 }
 
 #side-section{
@@ -97,18 +87,19 @@ html, body{
     margin-top: 130px;
     margin-left: 130px;
     position: fixed;
-    height: 3vw;
-    width: 3vw;
+    height: 2.2vw;
+    width: 2.2vw;
     cursor: pointer;
     z-index: 999;
-    padding: 3px 0px 0px 4px;
+    padding: 2px 0px 5px 2px;
     border-radius: 5px;
     background-color: aliceblue;
+    opacity: 0.9;
 }
 
 .menu-bar img{
-    height: 2.5vw;
-    width: 2.5vw;
+    height: 1.8vw;
+    width: 1.8vw;
 }
 
 .headlines{
@@ -136,6 +127,7 @@ html, body{
     text-transform: uppercase;
     -webkit-text-stroke: 0.02rem rgba(243, 243, 246, 0.781);
     transition: opacity 0.5s ease;
+    padding-left: 2%;
 }
 
 #coding-profiles{
@@ -250,10 +242,4 @@ html, body{
     line-height: 1.6;
 }
 
-
-#extra-curricular{
-    min-height: 100vh;
-    display: flex;
-    background-color: brown;
-}
-
+/*-----------------------------------------------------------------------------------*/
