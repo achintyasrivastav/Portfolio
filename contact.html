@@ -24,32 +24,37 @@
 
     </div>
 
-    <div class="envelope" id="envelope"> 
-        <div class="envelope-top" id="envelopeTop"></div>
-        <div class="envelope-body">
-          <div class="email-card">
-            <h2>Contact Me</h2>
-            <form>
-              <label for="name">Name:</label>
-              <input type="text" id="name" placeholder="Your Name" />
-              
-              <label for="email">Email:</label>
-              <input type="email" id="email" placeholder="Your Email" />
-              
-              <label for="message">Message:</label>
-              <textarea id="message" rows="4" placeholder="Your Message"></textarea>
-              
-              <button type="submit">Send</button>
-            </form>
-            <button id="closeButton" class="close-btn">Close</button>
-          </div>
-        </div>
-      </div>
-      
-      
-    
 
 
+    <div class="contact-container">
+        <h1 class="title">Get in Touch</h1>
+        <p class="subtitle">I’d love to hear from you. Drop me a message!</p>
+        
+        <form class="contact-form">
+            <div class="input-group">
+                <input type="text" id="name" required>
+                <label for="name">Your Name</label>
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" required>
+                <label for="email">Your Email</label>
+            </div>
+            <div class="input-group">
+                <textarea id="message" required></textarea>
+                <label for="message">Your Message</label>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+
+        <!-- Confirmation Message -->
+        <p id="confirmationMessage" class="confirmation-message" style="display: none;">
+            Thank you! Your message has been sent successfully.
+        </p>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="./contact.js"></script>
 </body>
 </html>

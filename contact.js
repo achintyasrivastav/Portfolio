@@ -1,13 +1,24 @@
-// JavaScript to handle open and close actions for the envelope
-const envelope = document.getElementById('envelope');
-const closeButton = document.getElementById('closeButton');
 
-// Open the envelope when clicked
-envelope.addEventListener('click', function () {
-  envelope.classList.toggle('open');
-});
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.querySelector(".contact-form");
+        const confirmationMessage = document.getElementById("confirmationMessage");
 
-// Close the envelope when the close button is clicked
-closeButton.addEventListener('click', function () {
-  envelope.classList.remove('open');
-});
+        form.addEventListener("submit", (e) => {
+            e.preventDefault(); // Prevent default form submission
+
+            // Show confirmation message
+            confirmationMessage.style.display = "block";
+            confirmationMessage.style.opacity = 1;
+
+            // Clear form fields
+            form.reset();
+
+            // Fade out confirmation message after 5 seconds
+            setTimeout(() => {
+                confirmationMessage.style.opacity = 0;
+                setTimeout(() => {
+                    confirmationMessage.style.display = "none";
+                }, 500);
+            }, 3000);
+        });
+    });
