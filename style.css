@@ -175,7 +175,7 @@ html, body{
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     text-transform: uppercase;
-    -webkit-text-stroke: 0.02rem rgba(243, 243, 246, 0.781);
+    -webkit-text-stroke: 0.05rem rgba(243, 243, 246, 0.781);
     position: absolute; 
     opacity: 0; 
     transition: opacity 0.5s ease;
@@ -616,10 +616,6 @@ html, body{
     .all-projects {
         padding: 10px 50px; /* Reduce padding for smaller buttons */
     }
-
-    #big-screen{
-        display: none;
-    }
 }
 
 @media (max-width: 480px) {
@@ -635,7 +631,5 @@ html, body{
         font-size: 24px; /* Scale down more */
     }
 
-    #big-screen{
-        display: none;
-    }
+    
 }

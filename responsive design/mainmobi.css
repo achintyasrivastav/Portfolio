@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+@media (max-width: 480px){
+    #header{
+        padding: 30px;
+    }
+    .header-wrap {
+        align-items: center;
+    }
+
+    #icons {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-top: 1px solid ghostwhite;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        background-color: black;
+        z-index: 999;
+      }
+
+    .contact-container{
+        margin-top: 0px;
+        padding: 0px 20px;
+    }
+
+    .social-icon {
+        height: 55px;
+        width: 55px;
+    }
+
+    .text-wrapper p {
+        padding-left: 180px;
+        padding-top: 45px;
+        font-size: 3rem;
+    }
+
+    .connect {
+        padding: 5px;
+    }
+    .project img {
+        height: 100px;
+        width: 100%;
+    }
+
+    .project{
+        display: grid;
+        grid-template-columns: 100px 1fr;
+    }
+
+    .projects h1 {
+        font-size: 50px;
+    }
+
+    .projects .all-projects {
+        
+        margin-left: 200px;
+    }
+
+    .wrapper {
+        margin: 420px 20px 0px 20px;
+        padding: 50px 35px;
+        margin-bottom: 150px;
+        
+    }
+
+    .reveal-screen {
+        min-height: 100vh;
+    }
+
+    
+}
+
+@media (max-width: 780px){
+    #header{
+        padding: 30px;
+    }
+    .header-wrap {
+        align-items: center;
+    }
+
+    #icons {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-top: 1px solid ghostwhite;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        background-color: black;
+        z-index: 999;
+      }
+
+    .contact-container{
+        margin-top: 0px;
+        padding: 0px 20px;
+    }
+
+    .social-icon {
+        height: 55px;
+        width: 55px;
+    }
+
+    .text-wrapper p {
+        padding-left: 180px;
+        padding-top: 45px;
+        font-size: 3rem;
+    }
+
+    .connect {
+        padding: 5px;
+    }
+    .project img {
+        height: 100px;
+        width: 100%;
+    }
+
+    .project{
+        display: grid;
+        grid-template-columns: 100px 1fr;
+    }
+
+    .projects h1 {
+        font-size: 50px;
+    }
+
+    .projects .all-projects {
+        
+        margin-left: 200px;
+    }
+
+    .wrapper {
+        margin: 420px 20px 0px 20px;
+        padding: 50px 35px;
+        margin-bottom: 150px;
+        
+    }
+
+    .reveal-screen {
+        min-height: 100vh;
+    }
+
+}
