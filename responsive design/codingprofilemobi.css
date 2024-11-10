@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+@media (max-width: 480px){
+
+    
+    #header{
+        padding: 30px;
+    }
+    .header-wrap {
+        align-items: center;
+    }
+
+    #icons {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-top: 1px solid ghostwhite;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        background-color: black;
+        z-index: 999;
+      }
+
+    .contact-container{
+        margin-top: 0px;
+        padding: 0px 20px;
+    }
+
+    .social-icon {
+        height: 55px;
+        width: 55px;
+    }
+
+    .coding-platforms {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        gap: 30px;
+        padding: 15px;
+    }
+
+    #main-section h1 {
+        font-size: 5.5vw;
+    }
+
+    br { content: ""; }
+
+    .cpimg1 {
+        height: 10px;
+        width: 100%;
+        padding: -50px 5px 5px 5px;
+    }
+
+    .contest {
+        height: 180px;
+        width: fit-content;
+        background-color: #1a1a1a;
+        border-radius: 10px;
+        
+    }
+    
+    .cpimg1 img {
+        height: auto;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .contest a {
+        padding: 5px;
+        text-decoration: none;
+        background-color: black;
+        border: 1px solid ghostwhite;
+        color: ghostwhite;
+        border-radius: 40px;
+        margin: 100px 0px;
+        display: block;
+        text-align: center;
+        font-size: 8px;
+    }
+
+    #cp-profile{
+        padding-bottom: 5px;
+    }
+
+    
+    #projects{
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+
+    .project{
+        padding-top: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pr-link a{
+        margin: 0px;
+    }
+    
+    .pr-link img{
+        height: 10px;
+        background-color: ghostwhite;
+        border-radius: 10px;
+    }
+
+    .project p{
+        color: aliceblue;
+        font-family: 'Poppins';
+        padding: 5%; /* dynamic padding that scales with parent size */
+        font-size: 1.2vw; /* makes font size responsive to viewport width */
+        max-width: 100%; /* ensures it doesn't overflow parent */
+        box-sizing: border-box; 
+        font-size: 6px;
+        line-height: 1.2;
+    }
+
+    body{
+        scroll-behavior: smooth;
+    }
+
+    .cp{
+        height: 80px;
+    }
+
+    .cp a{
+        padding: 5px;
+        text-decoration: none;
+        background-color: black;
+        border: 1px solid ghostwhite;
+        color: ghostwhite;
+        border-radius: 40px;
+        margin: 40px 0px;
+        display: block;
+        text-align: center;
+        font-size: 8px;
+    }
+
+    .git{
+        
+    }
+
+    .git img{
+        height: 45px;
+    }
+}
+
+@media (max-width: 780px){
+    #header{
+        padding: 30px;
+    }
+    .header-wrap {
+        align-items: center;
+    }
+
+    #icons {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-top: 1px solid ghostwhite;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        background-color: black;
+        z-index: 999;
+      }
+
+    .contact-container{
+        margin-top: 0px;
+        padding: 0px 20px;
+    }
+
+    .social-icon {
+        height: 55px;
+        width: 55px;
+    }
+
+   
+
+}
