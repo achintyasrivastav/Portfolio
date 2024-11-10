@@ -142,12 +142,19 @@
         font-size: 8px;
     }
 
-    .git{
-        
-    }
-
     .git img{
         height: 45px;
+    }
+
+    #side-section{
+        display: none;
+    }
+    #main-section{
+        margin-left: 10%;
+    }
+
+    .menu-bar {
+        display: none;
     }
 }
 
