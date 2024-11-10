@@ -1,24 +1,15 @@
 
-    document.addEventListener("DOMContentLoaded", () => {
-        const form = document.querySelector(".contact-form");
-        const confirmationMessage = document.getElementById("confirmationMessage");
+    document.querySelector('.contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent actual form submission
 
-        form.addEventListener("submit", (e) => {
-            e.preventDefault(); // Prevent default form submission
+        // Show the custom alert
+        document.getElementById('custom-alert').classList.remove('hidden');
+        
+        // Optionally reset the form
+        this.reset();
+    });
 
-            // Show confirmation message
-            confirmationMessage.style.display = "block";
-            confirmationMessage.style.opacity = 1;
-
-            // Clear form fields
-            form.reset();
-
-            // Fade out confirmation message after 5 seconds
-            setTimeout(() => {
-                confirmationMessage.style.opacity = 0;
-                setTimeout(() => {
-                    confirmationMessage.style.display = "none";
-                }, 500);
-            }, 3000);
-        });
+    document.getElementById('close-alert').addEventListener('click', function() {
+        // Hide the custom alert
+        document.getElementById('custom-alert').classList.add('hidden');
     });
