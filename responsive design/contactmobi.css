@@ -2,23 +2,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@media (max-width: 480px){
+    #header{
+        padding: 30px;
+    }
+    .header-wrap {
+        align-items: center;
+    }
+
+    #icons {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-top: 1px solid ghostwhite;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        
+      }
+
+    .contact-container{
+        margin-top: 0px;
+        padding: 0px 20px;
+    }
+
+    .social-icon {
+        height: 55px;
+        width: 55px;
+    }
+
 }
 
-html, body {
-    width: 100%;
-    background-color: black;
-    font-family: 'Raleway', sans-serif;
-    background-color: #000;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-    padding: 50px 0px;
+
+@media (max-width: 780px){
+    #header{
+        padding: 30px;
+    }
+    .header-wrap {
+        align-items: center;
+    }
+
+    #icons {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-top: 1px solid ghostwhite;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        
+      }
+
+    .contact-container{
+        margin-top: 0px;
+        padding: 0px 20px;
+    }
+
+    .social-icon {
+        height: 55px;
+        width: 55px;
+    }
+
 }
