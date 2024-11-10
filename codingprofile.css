@@ -11,10 +11,12 @@
 html, body{
     height: 100%;
     width: 100%;
-    background-color: black;
     font-family: "Roboto", sans-serif;
 }
 
+body{
+    background-color: black;
+}
 /*-------------------------------------------------------------------------------*/
 
 #header{

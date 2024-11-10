@@ -20,7 +20,7 @@
             <a href="./index.html"><img class="icon" src="./icons/house-48.png" alt=""></a>
             <a href="./codingprofile.html"><img class="icon" src="./icons/group-48.png" alt=""></a>
             <a href=""><img class="icon" src="./icons/chat-4-48.png" alt=""></a>
-            <a href=""><img class="icon" src="./icons/icons8-heart-94.png" alt=""></a>
+            <div class="theme"><img class="icon" src="./icons/icons8-heart-94.png" alt=""></div>
         </div>
 
     </div>
@@ -85,5 +85,33 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="./contact.js"></script>
+
+    <script>
+        let defaultTheme = true;
+
+        document.querySelector('.theme').addEventListener('click', ()=>{
+
+            if(defaultTheme){
+                //default ko change karna hai
+                //yani black -> white
+
+                document.body.style.backgroundColor = 'white';
+                document.querySelector('.contact-container').style.border = '1px solid black';
+                document.querySelector('.contact-container').style.borderRadius = '15px';
+                document.querySelector('.contact-container').style.backgroundColor = 'black';
+                defaultTheme = false;
+            
+            }
+            else{
+
+                document.body.style.backgroundColor = 'black';
+                document.querySelector('.contact-container').style.border = 'none';
+                document.querySelector('.contact-container').style.borderRadius = '0px';
+                document.querySelector('.title ').style.color = '#fff';
+                
+                defaultTheme = true;
+            }
+        });
+    </script>
 </body>
 </html>

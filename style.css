@@ -11,9 +11,13 @@
 html, body{
     min-height: 100vh;
     width: 100%;
-    background-color: black;  
     font-family: "Roboto", sans-serif;
 }
+
+body{
+  background-color: black;
+}
+
 
 .flower-container {
   position: absolute;
@@ -318,7 +322,6 @@ html, body{
 
 .project{
     font-family: 'Oswald', serif;
-    color: ghostwhite;
 }
 
 .projects h1{
@@ -336,7 +339,10 @@ html, body{
     display: flex;
     justify-content: space-between;
     padding-bottom: 20px;
+    color: ghostwhite;
 }
+
+
 
 .project img{
     margin-top: 9px;

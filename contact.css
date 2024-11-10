@@ -54,6 +54,7 @@ html, body {
 #icons {
     display: flex;
     align-items: center;
+    background-color: #000;
 }
 
 #icons a {

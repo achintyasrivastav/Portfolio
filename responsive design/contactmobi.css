@@ -19,7 +19,8 @@
         padding: 10px;
         display: flex;
         justify-content: space-around;
-        
+        background-color: black;
+        z-index: 999;
       }
 
     .contact-container{
