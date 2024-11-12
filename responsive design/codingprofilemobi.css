@@ -11,7 +11,7 @@
     .header-wrap {
         align-items: center;
     }
-
+    
     #icons {
         position: fixed;
         bottom: 0;
@@ -24,6 +24,10 @@
         background-color: black;
         z-index: 999;
       }
+    
+    #main-section{
+       padding-top: 100px;
+    }
 
     .contact-container{
         margin-top: 0px;
