@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 @media (max-width: 480px){
+    html{
+        scroll-behavior: smooth;
+    }
     #header{
         padding: 30px;
     }
@@ -24,8 +27,11 @@
       }
 
     .contact-container{
-        margin-top: 0px;
-        padding: 0px 20px;
+        margin-top: 20px;
+        padding-top: 100px;
+        padding-bottom: 150px;
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
     .social-icon {

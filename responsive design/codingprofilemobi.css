@@ -156,6 +156,10 @@
     .menu-bar {
         display: none;
     }
+
+    .github{
+        padding-bottom: 130px;
+    }
 }
 
 @media (max-width: 780px){
