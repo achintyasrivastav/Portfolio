@@ -158,7 +158,11 @@
     }
 
     .github{
+<<<<<<< HEAD
         padding-bottom: 130px;
+=======
+        padding-bottom: 100px;
+>>>>>>> a8a41751218f99e6382df812a12569bb570b8834
     }
 }
 
